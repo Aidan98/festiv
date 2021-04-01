@@ -13,6 +13,7 @@ const home = require('./src/routes/home')
 const search = require('./src/routes/searchUser')
 const profile = require('./src/routes/profile')
 const match = require('./src/routes/likeAndDislike')
+const PORT = process.env.PORT || 8000
 
 // Load in mongoose and make connection to database
 require('./src/db/mongoose.js')
@@ -41,7 +42,7 @@ app
     .get('/register', registerPage)
     .get('/home', home) // homepage with all the users
     .post('/match', match)
-    .listen(process.env.PORT || 8000)
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 function notFound(req, res) {
     res.status(404).render('notfound.ejs')
