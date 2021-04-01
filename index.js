@@ -45,7 +45,7 @@ app
     .get('/register', registerPage)
     .get('/home', home) // homepage with all the users
     .post('/match', match)
-    .listen(8000)
+    .listen(process.env.PORT || 8000)
 
 function notFound(req, res) {
     res.status(404).render('notfound.ejs')
