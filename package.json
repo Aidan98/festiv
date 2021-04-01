@@ -4,7 +4,7 @@
   "description": "Dating app feature",
   "main": "index.js",
   "scripts": {
-    "start": "npm start"
+    "start": "node index.js"
   }, 
   "engines": {
   "node": ">=15.10.0"},
